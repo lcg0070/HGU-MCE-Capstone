@@ -2,21 +2,11 @@
 # Enhancing U-Net for PCB Segmentation Using Hyperspectral Imaging in E-waste Recycling
 
 1. **Research folders** : final version of software, thesis paper, presentation etc. 
-2. **Tutorial**:  Github repository
-3. **Video Clip:**  
+2. **Tutorial**:  Github repository [Github](https://github.com/lcg0070/HGU-MCE-Capstone)
 
 
 ---
-
-
 ## Tutorial (For Software-based Topics) 
-
-Generate 640 × 640 images using the generation files (PCA and CUBE).
-Then train using the HSI_cube and HSI_PCA files, save the resulting weights, and compare their performance.
-
-### Requirements
-
-To use the codes without errors, install the libraries listed in the Requirements.txt file. The codes require at least 1 GPU to run and handle the data.
 
 ### Dataset Details
 
@@ -29,33 +19,45 @@ The dataset includes:
 
 To utilize the dataset, download it from the Rodare website: [Rodare](https://rodare.hzdr.de/record/2704), or from Zenodo: [Zenodo](https://zenodo.org/records/10617721).
 
+### Requirements
+
+To use the codes without errors, install the libraries listed in the Requirements.txt file. The codes require at least 1 GPU to run and handle the data.
+
+### Code Usage  
+
+---
+1. Make directory to save the dataset(train, validation, test) for full_channel dataset and PCA processed dataset
+2. Then using **HSI_cube_generation.ipynb, HSI_PCA_data_generation.ipynb** to generate cube dataset(640x640x214), pca dataset(640x640x3)
+3. Use the **HSI_cube.ipynb and HSI_PCA_data_generation.ipynb** to train each of the different models in the models folder and display the results for every model.
+   - HSI_cube.ipynb  
+        - End2End_AttUnet.py
+        - End2End_ResUnet.py
+        - End2End_Unet.py
+        - ResUnet.py
+        - Unet.py
+        - Unet_Attention.py
+   - HSI_PCA.ipynb
+        - ResUnet.py
+        - Unet.py
+        - Unet_Attention.py
+
+4. In the end, will obtain 9 separate weight files—one for each configuration:
+   - Full 214-channel input 
+     - ResUNet 
+     - UNet 
+     - Attention UNet 
+   - PCA-reduced 3-channel input 
+     - ResUNet 
+     - UNet 
+     - Attention UNet 
+   - 214-channel input with the SCRB module 
+     - ResUNet + SCRB 
+     - UNet + SCRB 
+     - Attention UNet + SCRB
+---
+
 
 ## License
 
 The code is licensed under the Apache-2.0 license. Any further development and application using this work should be opened and shared with the community.
 
-
-[//]: # (## Video Clip)
-
-[//]: # ()
-[//]: # (Submit Video clip file &#40;~30sec&#41;.  This will be uploaded in my Lab's youtube. )
-
-[//]: # ()
-[//]: # ()
-[//]: # ()
-[//]: # (It should contain)
-
-[//]: # ()
-[//]: # (* Title page:  )
-
-[//]: # (  * Course name, date, Research title, your name, advisor's name)
-
-[//]: # (  * Institute &#40; School of Mechanical and Control Engineering&#41;)
-
-[//]: # (* Overview of research:)
-
-[//]: # (  * You can use PPT or Poster to explain overview of research)
-
-[//]: # (* Result Video)
-
-[//]: # (  * image, video that demonstrate results)
