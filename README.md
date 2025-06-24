@@ -3,7 +3,7 @@
 
 1. **Research folders** : final version of software, thesis paper, presentation etc. 
 2. **Tutorial**:  Github repository [Github](https://github.com/lcg0070/HGU-MCE-Capstone)
-
+3. **Video Clip**: [Youtube](https://youtu.be/RDxqIfjPETQ)
 
 ---
 ## Tutorial (For Software-based Topics) 
